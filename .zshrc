@@ -21,6 +21,7 @@ SAVEHIST=1000
 ############ TAB COMPLETION ############
 autoload -Uz compinit
 zstyle ':completion:*' menu select # Enable menu
+zstyle ':completion:*' list-colors "${(s.:.)LS_COLORS}" # Coloured menu
 zmodload zsh/complist
 compinit
 _comp_options+=(globdots) # Add hidden files to tab completion

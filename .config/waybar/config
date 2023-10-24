@@ -63,6 +63,7 @@
         "format-muted": "󰖁 {volume}%",
         "format-icons": ["󰕿", "󰖀", "󰕾"],
         "tooltip-format": "{node_name}",
-        "reverse-scrolling": 1
+        "reverse-scrolling": 1,
+        "on-click-right": "~/.config/waybar/scripts/volume_round.sh"
     }
 }

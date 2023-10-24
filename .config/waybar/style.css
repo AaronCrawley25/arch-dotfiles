@@ -32,6 +32,10 @@ __      ____ _ _   _| |__   __ _ _ __
 	min-height: 16px;
 }
 
+tooltip {
+	font-size: 12px;
+}
+
 window#waybar {
 	background: transparent;
 }
@@ -79,6 +83,10 @@ window#waybar.hidden {
 	color: @color2;
 	background: @color9;
 	font-size: 12px;
+}
+
+#custom-power button:hover {
+	background: @color8;
 }
 
 #custom-power {
