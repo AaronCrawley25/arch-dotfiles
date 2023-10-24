@@ -1,0 +1,68 @@
+//                      _                
+//                     | |               
+// __      ____ _ _   _| |__   __ _ _ __ 
+// \ \ /\ / / _` | | | | '_ \ / _` | '__|
+//  \ V  V | (_| | |_| | |_) | (_| | |   
+//   \_/\_/ \__,_|\__, |_.__/ \__,_|_|   
+//                 __/ |                 
+//                |___/                  
+//
+// 	File: config
+// 	Author: Aaron Crawley
+//
+
+{
+    "layer": "top",
+    "modules-left": ["hyprland/workspaces", "hyprland/window"],
+    "modules-right": ["battery", "network", "wireplumber", "clock", "custom/power"],
+    "battery": {
+        "format": "{capacity}%   {icon} ",
+        "format-charging": "{capacity}%   {icon} ",
+        "format-full": "{capacity}% 󰡴  {icon} ",
+        "format-icons": ["", "", "", "", ""]
+    },
+    "clock": {
+        "format": "{:%a %d %b  %H:%M}"
+    },
+    "hyprland/workspaces": {
+        "sort-by": "number",
+        "on-click": "activate",
+        "format": "{icon}",
+        "format-icons": {
+            "default": "",
+            "spotify": "",
+            "discord": "󰙯",
+            "1": "󰲠",
+            "2": "󰲢",
+            "3": "󰲤",
+            "4": "󰲦",
+            "5": "󰲨",
+            "6": "󰲪",
+            "7": "󰲬",
+            "8": "󰲮",
+            "9": "󰲰",
+            "10": "󰿬"
+        }
+    },
+    "hyprland/window": {
+        "format": "{title}"
+    },
+    "custom/power": {
+        "format": "",
+        "on-click": "~/.config/rofi/powermenu/run.sh"
+    },
+    "network": {
+        "format": "󱘖 No Connection",
+        "format-wifi": "󰤥  {essid}",
+        "format-ethernet": "󰈀 Wired Connection",
+        "on-click": "networkmanager_dmenu",
+        "tooltip-format": "󰩠 {ipaddr}\n󱂇 {gwaddr}/{cidr}"
+    },
+    "wireplumber": {
+        "format": "{icon} {volume}%",
+        "format-muted": "󰖁 {volume}%",
+        "format-icons": ["󰕿", "󰖀", "󰕾"],
+        "tooltip-format": "{node_name}",
+        "reverse-scrolling": 1
+    }
+}

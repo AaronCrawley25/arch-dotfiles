@@ -1,0 +1,87 @@
+/*
+                     _                
+                    | |               
+__      ____ _ _   _| |__   __ _ _ __ 
+\ \ /\ / / _` | | | | '_ \ / _` | '__|
+ \ V  V | (_| | |_| | |_) | (_| | |   
+  \_/\_/ \__,_|\__, |_.__/ \__,_|_|   
+                __/ |                 
+               |___/                  
+
+	File: style.css
+	Author: Aaron Crawley
+*/
+
+
+@define-color color1 #0B090A;
+@define-color color2 #161A1D;
+@define-color color3 #660708;
+@define-color color4 #A4161A;
+@define-color color5 #BA181B;
+@define-color color6 #E5383B;
+@define-color color7 #B1A7A6;
+@define-color color8 #D3D3D3;
+@define-color color9 #F5F3F4;
+@define-color color10 #FFFFFF;
+
+* {
+	border: none;
+	border-radius: 0;
+	font-family: 'CaskaydiaCove Nerd Font';
+	font-weight: 600;
+	min-height: 16px;
+}
+
+window#waybar {
+	background: transparent;
+}
+
+window#waybar.hidden {
+	opacity: 0.2;
+}
+
+#workspaces {
+	margin-top: 8px;
+	margin-left: 12px;
+	margin-right: 4px;
+	border-radius: 26px;
+	background: @color9;
+	transition: none;
+	font-size: 15px;
+}
+
+#workspaces button {
+	transition: none;
+	color: @color3;
+	background: transparent;
+}
+
+#workspaces button.active {
+	color: @color5;
+}
+
+#workspaces button:hover {
+	transition: none;
+	box-shadow: inherit;
+	text-shadow: inherit;
+	color: @color6;
+}
+
+#battery, #clock, #custom-apps, #window, #custom-power, #network, #wireplumber {
+	margin-top: 8px;
+	margin-left: 4px;
+	margin-right: 4px;
+	padding-left: 14px;
+	padding-right: 14px;
+	margin-bottom: 0;
+	border-radius: 26px;
+	transition: none;
+	color: @color2;
+	background: @color9;
+	font-size: 12px;
+}
+
+#custom-power {
+	padding-left: 10px;
+	margin-right: 12px;
+}
