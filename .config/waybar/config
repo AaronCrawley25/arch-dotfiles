@@ -13,13 +13,13 @@
 
 {
     "layer": "top",
-    "modules-left": ["hyprland/workspaces", "hyprland/window"],
-    "modules-right": ["battery", "network", "wireplumber", "clock", "custom/power"],
+    "modules-left": [ "hyprland/workspaces", "hyprland/window" ],
+    "modules-right": [ "battery", "network", "wireplumber", "clock", "custom/power" ],
     "battery": {
         "format": "{capacity}%   {icon} ",
         "format-charging": "{capacity}%   {icon} ",
         "format-full": "{capacity}% 󰡴  {icon} ",
-        "format-icons": ["", "", "", "", ""]
+        "format-icons": [ "", "", "", "", "" ]
     },
     "clock": {
         "format": "{:%a %d %b  %H:%M}"
@@ -61,7 +61,7 @@
     "wireplumber": {
         "format": "{icon} {volume}%",
         "format-muted": "󰖁 {volume}%",
-        "format-icons": ["󰕿", "󰖀", "󰕾"],
+        "format-icons": [ "󰕿", "󰖀", "󰕾" ],
         "tooltip-format": "{node_name}",
         "reverse-scrolling": 1,
         "on-click-right": "~/.config/waybar/scripts/volume_round.sh"

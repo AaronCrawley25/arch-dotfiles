@@ -1,0 +1,22 @@
+/*
+    ______       __ _ 
+    | ___ \     / _(_)
+    | |_/ /___ | |_ _ 
+    |    // _ \|  _| |
+    | |\ | (_) | | | |
+    \_| \_\___/|_| |_|
+                  
+    File: colour.rasi
+    Author: Aaron Crawley
+    Based on: https://github.com/adi1090x/rofi              
+*/
+
+
+* {
+    background:     #F5F3F4EE;
+    background-alt: #B1A7A6EE;
+    foreground:     #161A1DFF;
+    selected:       #E5383BFF;
+    active:         #0B090AFF;
+    urgent:         #E5383BFF;
+}

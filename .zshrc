@@ -48,5 +48,5 @@ source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zs
 
 ############ AUTOSUGGESIONS ############
 source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
-ZSH_AUTOSUGGEST_STRATEGY=(history completion) # Add tab completion to autosuggest
+ZSH_AUTOSUGGEST_STRATEGY=(completion history) # Add tab completion to autosuggest
 ZSH_AUTOSUGGEST_HISTORY_IGNORE="(cd *)|(ls *)" # Using history here sucks
