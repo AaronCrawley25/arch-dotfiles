@@ -25,7 +25,7 @@
         "format": "{:%a %d %b  %H:%M}"
     },
     "hyprland/workspaces": {
-        "sort-by": "number",
+        "sort-by": "ID",
         "on-click": "activate",
         "format": "{icon}",
         "format-icons": {
@@ -56,7 +56,7 @@
         "format-wifi": "󰤥  {essid}",
         "format-ethernet": "󰈀 Wired Connection",
         "on-click": "networkmanager_dmenu",
-        "tooltip-format": "󰩠 {ipaddr}\n󱂇 {gwaddr}/{cidr}"
+        "tooltip-format": "󰩠 {ipaddr}\n󱂇 {gwaddr}/{cidr}",
     },
     "wireplumber": {
         "format": "{icon} {volume}%",

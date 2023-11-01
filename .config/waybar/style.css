@@ -45,8 +45,8 @@ window#waybar.hidden {
 }
 
 #workspaces {
-	margin-top: 8px;
-	margin-left: 12px;
+	margin-top: 6px;
+	margin-left: 8px;
 	margin-right: 4px;
 	border-radius: 26px;
 	background: @color9;
@@ -71,8 +71,14 @@ window#waybar.hidden {
 	color: @color6;
 }
 
-#battery, #clock, #custom-apps, #window, #custom-power, #network, #wireplumber {
-	margin-top: 8px;
+#battery,
+#clock,
+#custom-apps,
+#window,
+#custom-power,
+#network,
+#wireplumber {
+	margin-top: 6px;
 	margin-left: 4px;
 	margin-right: 4px;
 	padding-left: 14px;
@@ -90,6 +96,6 @@ window#waybar.hidden {
 }
 
 #custom-power {
-	padding-left: 10px;
-	margin-right: 12px;
+	padding-left: 11px;
+	margin-right: 8px;
 }
