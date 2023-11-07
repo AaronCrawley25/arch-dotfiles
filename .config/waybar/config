@@ -22,7 +22,14 @@
         "format-icons": [ "", "", "", "", "" ]
     },
     "clock": {
-        "format": "{:%a %d %b  %H:%M}"
+        "format": "󰥔 {:%H:%M}",
+        "tooltip-format": "<tt>{calendar}</tt>",
+        "calendar": {
+            "format": {
+                "today": "<span color='#E5383B'><b>{}</b></span>"
+            },
+            "on-scroll": -1
+        }
     },
     "hyprland/workspaces": {
         "sort-by": "ID",
