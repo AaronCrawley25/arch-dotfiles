@@ -71,12 +71,27 @@ window#waybar.hidden {
 	color: @color6;
 }
 
+#bluetooth {
+	font-size: 13px;
+}
+
 #battery,
 #clock,
 #custom-apps,
 #window,
 #custom-power,
 #network,
+#wireplumber {
+	font-size: 12px;
+}
+
+#battery,
+#clock,
+#custom-apps,
+#window,
+#custom-power,
+#network,
+#bluetooth,
 #wireplumber {
 	margin-top: 6px;
 	margin-left: 4px;
@@ -88,7 +103,6 @@ window#waybar.hidden {
 	transition: none;
 	color: @color2;
 	background: @color9;
-	font-size: 12px;
 }
 
 #custom-power button:hover {

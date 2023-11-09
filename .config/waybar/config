@@ -14,7 +14,7 @@
 {
     "layer": "top",
     "modules-left": [ "hyprland/workspaces", "hyprland/window" ],
-    "modules-right": [ "battery", "network", "wireplumber", "clock", "custom/power" ],
+    "modules-right": [ "battery", "network", "bluetooth", "wireplumber", "clock", "custom/power" ],
     "battery": {
         "format": "{capacity}%   {icon} ",
         "format-charging": "{capacity}%   {icon} ",
@@ -69,8 +69,15 @@
         "format": "{icon} {volume}%",
         "format-muted": "󰖁 {volume}%",
         "format-icons": [ "󰕿", "󰖀", "󰕾" ],
-        "tooltip-format": "{node_name}",
+        "tooltip-format": "Device: {node_name}",
         "reverse-scrolling": 1,
-        "on-click-right": "~/.config/waybar/scripts/volume_round.sh"
+        "on-click": "~/.config/rofi/settings/run_audio.sh"
+    },
+    "bluetooth": {
+        "format-disabled": "󰂲",
+        "format-off": "󰂲",
+        "format-on": "󰂯",
+        "format-connected": "󰂱",
+        "on-click": "rofi-bluetooth"
     }
 }
