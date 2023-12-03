@@ -1,6 +1,6 @@
 screenshots
 clock
-font=CaskaydiaCove Nerd Font
+font=CaskaydiaCove NF
 ignore-empty-password
 indicator
 indicator-radius=100
@@ -14,3 +14,4 @@ line-color=FFFFFF00
 inside-color=161A1D88
 text-color=F5F3F4
 fade-in=5
+datestr=%a %d/%m/%y

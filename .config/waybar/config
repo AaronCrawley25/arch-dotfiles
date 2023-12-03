@@ -14,11 +14,11 @@
 {
     "layer": "top",
     "modules-left": [ "hyprland/workspaces", "hyprland/window" ],
-    "modules-right": [ "battery", "network", "bluetooth", "wireplumber", "clock", "custom/power" ],
+    "modules-right": [ "battery", "network", "bluetooth", "custom/dnd", "wireplumber", "clock", "custom/power" ],
     "battery": {
-        "format": "{capacity}%   {icon} ",
-        "format-charging": "{capacity}%   {icon} ",
-        "format-full": "{capacity}% 󰡴  {icon} ",
+        "format": "{capacity}% {icon} ",
+        "format-charging": "{capacity}% ",
+        "format-full": "{capacity}%  {icon} ",
         "format-icons": [ "", "", "", "", "" ]
     },
     "clock": {
@@ -71,7 +71,7 @@
         "format-icons": [ "󰕿", "󰖀", "󰕾" ],
         "tooltip-format": "Device: {node_name}",
         "reverse-scrolling": 1,
-        "on-click": "~/.config/rofi/settings/run_audio.sh"
+        "on-click": "~/.config/rofi/settings/run_audio.py"
     },
     "bluetooth": {
         "format-disabled": "󰂲",
@@ -79,5 +79,11 @@
         "format-on": "󰂯",
         "format-connected": "󰂱",
         "on-click": "rofi-bluetooth"
+    },
+    "custom/dnd": {
+        "exec": "[ $(dunstctl is-paused) = 'true' ] && echo 󰂛 || echo 󰂚 ",
+        "signal": 8,
+        "on-click": "dunstctl set-paused toggle",
+        "exec-on-event": true
     }
 }

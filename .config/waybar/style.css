@@ -27,7 +27,7 @@ __      ____ _ _   _| |__   __ _ _ __
 * {
 	border: none;
 	border-radius: 0;
-	font-family: 'CaskaydiaCove Nerd Font';
+	font-family: 'CaskaydiaCove NF';
 	font-weight: 600;
 	min-height: 16px;
 }
@@ -81,7 +81,8 @@ window#waybar.hidden {
 #window,
 #custom-power,
 #network,
-#wireplumber {
+#wireplumber,
+#custom-dnd {
 	font-size: 12px;
 }
 
@@ -92,7 +93,8 @@ window#waybar.hidden {
 #custom-power,
 #network,
 #bluetooth,
-#wireplumber {
+#wireplumber,
+#custom-dnd {
 	margin-top: 6px;
 	margin-left: 4px;
 	margin-right: 4px;
@@ -107,6 +109,10 @@ window#waybar.hidden {
 
 #custom-power button:hover {
 	background: @color8;
+}
+
+#custom-dnd {
+	padding-left: 12px;
 }
 
 #custom-power {
