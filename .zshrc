@@ -37,9 +37,14 @@ alias cls="printf '\033[2J\033[3J\033[1;1H'" # Clears the scrollback buffer too!
 alias configit='/usr/bin/git --git-dir=$HOME/.configit/ --work-tree=$HOME' # Allows managing of dotfiles with git
 alias kssh="kitten ssh" # SSH doesn't work with kitty by default, so we doin' this instead
 
+############ FUNCTIONS  ############
+lfcd () {
+    # `command` is needed in case `lfcd` is aliased to `lf`
+    cd "$(command lf -print-last-dir "$@")"
+}
+
 ############ ENVIRONMENT ############
 export GPG_TTY=$(tty)
-export VISUAL=code
 
 ############ KEYBINDS ############
 bindkey '\e[H'  beginning-of-line # Home Key

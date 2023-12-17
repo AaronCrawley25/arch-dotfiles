@@ -5,7 +5,7 @@
       "alignment": "left",
       "segments": [
         {
-          "foreground": "lightRed",
+          "foreground": "lightWhite",
           "foreground_templates": [
             "{{ if .Root }}lightRed{{ end }}"
           ],
@@ -13,7 +13,7 @@
             "display_host": true
           },
           "style": "plain",
-          "template": "<{{ if .Root }}lightRed{{ else }}red{{ end }}>\u250c\u2500\u2500(</>{{ .UserName }}{{ if .Root }} @ {{ else }} @ {{ end }}{{ .HostName }}<{{ if .Root }}lightRed{{ else }}red{{ end }}>)</>",
+          "template": "<{{ if .Root }}lightRed{{ else }}red{{ end }}>\u250c\u2500\u2500(</>{{ .UserName }}{{ if .Root }} \udb82\udcc7 {{ else }} \udb82\udcc7 {{ end }}{{ .HostName }}<{{ if .Root }}lightRed{{ else }}red{{ end }}>)</>",
           "type": "session"
         },
         {
@@ -59,7 +59,7 @@
           "type": "executiontime"
         },
         {
-          "foreground": "red",
+          "foreground": "lightGreen",
           "foreground_templates": [
             "{{ if gt .Code 0 }}red{{ end }}"
           ],
@@ -67,7 +67,7 @@
             "always_enabled": true
           },
           "style": "plain",
-          "template": " {{ if gt .Code 0 }}\u2a2f{{else}}\u2713{{ end }} ",
+          "template": " {{ if gt .Code 0 }}<white>({{ .Code }})</> \u2a2f{{else}}\u2713{{ end }} ",
           "type": "exit"
         }
       ],
@@ -78,7 +78,7 @@
       "newline": true,
       "segments": [
         {
-          "foreground": "lightRed",
+          "foreground": "lightWhite",
           "style": "plain",
           "template": "<{{ if .Root }}lightRed{{ else }}red{{ end }}>\u2514\u2500</>{{ if .Root }}<lightRed>#</>{{ else }}${{ end }} ",
           "type": "text"

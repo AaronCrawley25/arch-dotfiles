@@ -14,7 +14,8 @@
 {
     "layer": "top",
     "modules-left": [ "hyprland/workspaces", "hyprland/window" ],
-    "modules-right": [ "battery", "network", "bluetooth", "custom/dnd", "wireplumber", "clock", "custom/power" ],
+    // "modules-center": [ "cava" ],
+    "modules-right": [ "cava", "battery", "network", "bluetooth", "custom/dnd", "wireplumber", "clock", "custom/power" ],
     "battery": {
         "format": "{capacity}% {icon} ",
         "format-charging": "{capacity}% ",
@@ -81,9 +82,10 @@
         "on-click": "rofi-bluetooth"
     },
     "custom/dnd": {
-        "exec": "[ $(dunstctl is-paused) = 'true' ] && echo 󰂛 || echo 󰂚 ",
+        "exec": "[ $(dunstctl is-paused) = 'true' ] && echo '󰂛\nNotifications Disabled' || echo '󰂚\nNotifications Enabled' ",
+        // Workaround to get immediate updates
         "signal": 8,
-        "on-click": "dunstctl set-paused toggle",
-        "exec-on-event": true
+        "on-click": "dunstctl set-paused toggle && pkill -RTMIN+8 waybar",
+        "exec-on-event": false
     }
 }
