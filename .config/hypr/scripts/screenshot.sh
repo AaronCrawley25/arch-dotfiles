@@ -16,4 +16,4 @@ confirm_cmd() {
 }
 
 option=$(echo -e "󰍹\n󰊓" | confirm_cmd)
-[ $option = "󰍹" ] && $(sleep 1; grim) || grim -g "$(slurp)"
+[ $option = "󰍹" ] && $(sleep 1; grim) || $( [ $option = "󰊓" ]  && grim -g "$(slurp)" )

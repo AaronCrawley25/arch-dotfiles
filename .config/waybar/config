@@ -53,7 +53,8 @@
         }
     },
     "hyprland/window": {
-        "format": "{title}"
+        "format": "{title}",
+        "separate-outputs": true
     },
     "custom/power": {
         "format": "",

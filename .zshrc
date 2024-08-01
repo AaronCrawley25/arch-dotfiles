@@ -28,7 +28,7 @@ _comp_options+=(globdots) # Add hidden files to tab completion
 unsetopt LIST_BEEP # Disable the tab complete beep
 
 ############ ALIASES ############
-alias ls='ls --color=auto'
+alias ls='ls --color=auto --group-directories-first'
 alias la='ls -a'
 alias ll='ls -la'
 alias grep='grep --color=auto'

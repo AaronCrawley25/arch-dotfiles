@@ -71,10 +71,6 @@ window#waybar.hidden {
 	color: @color6;
 }
 
-#bluetooth {
-	font-size: 13px;
-}
-
 #battery,
 #clock,
 #custom-apps,
@@ -86,6 +82,7 @@ window#waybar.hidden {
 	font-size: 12px;
 }
 
+/* Modules theming */
 #battery,
 #clock,
 #custom-apps,
@@ -107,10 +104,16 @@ window#waybar.hidden {
 	background: @color9;
 }
 
-#custom-power button:hover {
+/* Modules hover theming */
+#network:hover,
+#bluetooth:hover,
+#custom-dnd:hover,
+#wireplumber:hover,
+#custom-power:hover {
 	background: @color8;
 }
 
+/* Override module theming */
 #custom-dnd {
 	padding-left: 12px;
 }
@@ -118,4 +121,8 @@ window#waybar.hidden {
 #custom-power {
 	padding-left: 11px;
 	margin-right: 8px;
+}
+
+#bluetooth {
+	font-size: 13px;
 }
