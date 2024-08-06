@@ -1,6 +1,7 @@
 #!/bin/sh
+sleep 5
 hyprctl keyword misc:focus_on_activate false
 discord &
 spotify &
-sleep 15
+sleep 30
 hyprctl keyword misc:focus_on_activate true

@@ -1,3 +1,12 @@
 {
+  "chromiumSwitches": {},
+  "IS_MAXIMIZED": false,
+  "IS_MINIMIZED": false,
+  "WINDOW_BOUNDS": {
+    "x": 8,
+    "y": 46,
+    "width": 1903,
+    "height": 1144
+  },
   "SKIP_HOST_UPDATE": true
 }
