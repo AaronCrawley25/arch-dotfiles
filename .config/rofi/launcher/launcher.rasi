@@ -17,6 +17,10 @@ configuration {
     show-icons:                 true;
     display-drun:               "  Apps";
 	drun-display-format:        "{name}";
+
+    hover-select: true;
+    me-select-entry: "MousePrimary";
+    me-accept-entry: "!MousePrimary";
 }
 
 /*****----- Global Properties -----*****/

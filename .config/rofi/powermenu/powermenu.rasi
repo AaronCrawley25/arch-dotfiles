@@ -19,6 +19,10 @@ configuration {
     kb-select-3:                "i";
     kb-select-4:                "r";
     kb-select-5:                "u";
+
+    hover-select: true;
+    me-select-entry: "MousePrimary";
+    me-accept-entry: "!MousePrimary";
 }
 
 /*****----- Global Properties -----*****/

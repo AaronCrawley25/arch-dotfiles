@@ -13,6 +13,9 @@
 
 /*****----- Configuration -----*****/
 configuration {
+    hover-select: true;
+    me-select-entry: "MousePrimary";
+    me-accept-entry: "!MousePrimary";
 }
 
 /*****----- Global Properties -----*****/
