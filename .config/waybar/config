@@ -19,7 +19,6 @@
     ],
     // "modules-center": [ "cava" ],
     "modules-right": [
-        "cava",
         "battery",
         "network",
         "bluetooth",
@@ -77,6 +76,7 @@
             "class<firefox>": " 󰈹", // Windows whose classes are "firefox"
             "class<kitty>": " ",
             "code": " 󰨞",
+            "nemo": " ",
             "spotify": "",
             "discord": ""
         }

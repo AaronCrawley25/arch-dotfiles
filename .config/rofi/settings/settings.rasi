@@ -13,14 +13,13 @@
 
 /*****----- Configuration -----*****/
 configuration {
-    hover-select: true;
-    me-select-entry: "MousePrimary";
-    me-accept-entry: "!MousePrimary";
+    
 }
 
 /*****----- Global Properties -----*****/
 @import                          "common/colours.rasi"
 @import                          "common/fonts.rasi"
+@import                          "common/config.rasi"
 
 * {
     border-colour:               var(selected);
