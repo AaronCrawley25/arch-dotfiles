@@ -72,11 +72,18 @@
         "format-window-separator": "", // Window separator is blank to have discord/spotify workspaces not have massive gaps
         "window-rewrite-default": " ", // Add space before every icon since there is no separator
         "window-rewrite": {
-            "title<.*youtube.*>": " 󰗃", // Windows whose titles contain "youtube"
+            "title<.*youtube.*> class<firefox>": " 󰗃", // Windows whose titles contain "youtube"
+            "title<.*vim.*>": " ", // Windows whose titles contain "vim"
             "class<firefox>": " 󰈹", // Windows whose classes are "firefox"
             "class<kitty>": " ",
+            "class<com.github.flxzt.rnote>": " 󱓧",
+            "class<org.mixxx.Mixxx>": " ",
+            "class<io.missioncenter.MissionCenter>": " ",
             "code": " 󰨞",
+            "mpv": " ",
             "nemo": " ",
+            "eog": " ",
+            "calculator": " ",
             "spotify": "",
             "discord": ""
         }
