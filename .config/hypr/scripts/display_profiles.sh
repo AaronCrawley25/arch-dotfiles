@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/usr/bin/bash
 # This script creates different display profiles for each
 # monitor setup and switches between them when moving between setups
 

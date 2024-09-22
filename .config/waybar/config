@@ -23,9 +23,9 @@
         "network",
         "bluetooth",
         "custom/dnd",
-        "wireplumber",
+        "group/sound",
         "clock",
-        "custom/power"
+        "group/setpow"
     ],
     "battery": {
         "on-click": "~/.config/rofi/settings/run_power.sh",
@@ -47,7 +47,12 @@
             "format": {
                 "today": "<span color='#E5383B'><b>{}</b></span>"
             },
-            "on-scroll": -1
+            "on-scroll": 1
+        },
+        "actions": {
+            "on-scroll-up": "shift_down",
+            "on-scroll-down": "shift_up",
+            "on-click": "shift_reset"
         }
     },
     "hyprland/workspaces": {
@@ -72,7 +77,9 @@
         "format-window-separator": "", // Window separator is blank to have discord/spotify workspaces not have massive gaps
         "window-rewrite-default": " ", // Add space before every icon since there is no separator
         "window-rewrite": {
-            "title<.*youtube.*> class<firefox>": " 󰗃", // Windows whose titles contain "youtube"
+            "class<firefox> title<.*youtube.*>": " 󰗃", // Windows whose titles contain "youtube"
+            "class<firefox> title<.*outlook.*>": " 󰴢", // Windows whose titles contain "outlook"
+            "class<firefox> title<Picture-in-Picture>": "", // Windows whose titles contain "outlook"
             "title<.*vim.*>": " ", // Windows whose titles contain "vim"
             "class<firefox>": " 󰈹", // Windows whose classes are "firefox"
             "class<kitty>": " ",
@@ -96,12 +103,28 @@
         "format": "",
         "on-click": "~/.config/rofi/powermenu/run.sh"
     },
+    "custom/settings": {
+        "format": "󰒓",
+        "on-click": "~/.config/rofi/settings/run.sh"
+    },
+    "group/setpow": {
+        "orientation": "inherit",
+        "drawer": {
+            "transition-duration": 500,
+            "children-class": "not-power",
+            "transition-left-to-right": false
+        },
+        "modules": [
+            "custom/power",
+            "custom/settings"
+        ]
+    },
     "network": {
-        "format": "󱘖 No Connection",
+        "format": "󱘖 Disconnected",
         "format-wifi": "󰤥  {essid}",
         "format-ethernet": "󰈀 Wired Connection",
         "on-click": "networkmanager_dmenu",
-        "tooltip-format": "󰩠 {ipaddr}\n󱂇 {gwaddr}/{cidr}",
+        "tooltip-format": "󰈀 {ifname}\n󰩠 {ipaddr}\n󱂇 {gwaddr}/{cidr}",
     },
     "wireplumber": {
         "format": "{icon} {volume}%",
@@ -137,5 +160,30 @@
     "custom/launcher": {
         "format": "󰣇",
         "on-click": "~/.config/rofi/launcher/run.sh"
+    },
+    "privacy": {
+        "icon-spacing": 5,
+        "icon-size": 12,
+        "transition-duration": 250,
+        "modules": [
+            {
+                "type": "screenshare",
+                "tooltip": true,
+                "tooltip-icon-size": 15
+            },
+            {
+                "type": "audio-in",
+                "tooltip": true,
+                "tooltip-icon-size": 15
+            }
+        ]
+    },
+    "group/sound": {
+        "orientation": "horizontal",
+        "modules": [
+            "wireplumber",
+            "privacy"
+        ],
+        "drawer": ""
     }
 }

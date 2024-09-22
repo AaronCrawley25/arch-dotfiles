@@ -84,7 +84,7 @@ window#waybar.hidden {
 #window,
 #custom-power,
 #network,
-#wireplumber,
+#sound,
 #custom-dnd {
 	font-size: 12px;
 }
@@ -94,11 +94,12 @@ window#waybar.hidden {
 #clock,
 #custom-apps,
 #window,
-#custom-power,
+/* #custom-power, */
 #custom-launcher,
 #network,
 #bluetooth,
-#wireplumber,
+#sound,
+#setpow,
 #custom-dnd {
 	margin-top: 6px;
 	margin-left: 4px;
@@ -118,8 +119,9 @@ window#waybar.hidden {
 #custom-dnd:hover,
 #custom-launcher:hover,
 #battery:hover,
-#wireplumber:hover,
-#custom-power:hover,
+#sound:hover,
+/* #custom-power:hover, */
+#setpow:hover,
 #clock:hover {
 	background: @color8;
 }
@@ -137,10 +139,17 @@ window#waybar.hidden {
 }
 
 #custom-power {
-	padding-left: 11px;
-	margin-right: 8px;
+	margin-right: 4px;
+}
+
+#custom-settings {
+	margin-right: 16px;
 }
 
 #bluetooth {
 	font-size: 13px;
+}
+
+#privacy {
+	margin-left: 8px;
 }

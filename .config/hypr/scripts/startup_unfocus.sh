@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/usr/bin/bash
 sleep 5
 hyprctl keyword misc:focus_on_activate false
 discord &

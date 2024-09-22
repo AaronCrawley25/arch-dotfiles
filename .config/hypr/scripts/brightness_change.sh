@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/bash
 # changeBrightness
 
 # Arbitrary but unique message tag

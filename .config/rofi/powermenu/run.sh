@@ -67,8 +67,8 @@ run_cmd() {
 		elif [[ $1 == '--reboot' ]]; then
 			systemctl reboot
 		elif [[ $1 == '--suspend' ]]; then
-			mpc -q pause
-			amixer set Master mute
+			# mpc -q pause
+			# amixer set Master mute
 			systemctl suspend
 		elif [[ $1 == '--logout' ]]; then
 			hyprctl dispatch exit
@@ -88,7 +88,7 @@ case ${chosen} in
 		run_cmd --reboot
         ;;
     $lock)
-		sleep 0.5 ; swaylock
+		sleep 0.5 ; hyprlock
         ;;
     $suspend)
 		run_cmd --suspend

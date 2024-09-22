@@ -1,3 +1,3 @@
-#!/usr/bin/zsh
+#!/usr/bin/bash
 killall waybar
 waybar &

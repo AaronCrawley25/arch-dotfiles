@@ -1,4 +1,4 @@
-#!/usr/bin/zsh
+#!/usr/bin/bash
 
 dir="$HOME/.config/rofi/powermenu/"
 theme='powermenu'
