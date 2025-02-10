@@ -22,6 +22,7 @@ SAVEHIST=1000
 autoload -Uz compinit
 zstyle ':completion:*' menu select # Enable menu
 zstyle ':completion:*' list-colors "${(s.:.)LS_COLORS}" # Coloured menu
+zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}' # Case insensitive completion
 zmodload zsh/complist
 compinit
 _comp_options+=(globdots) # Add hidden files to tab completion
@@ -32,6 +33,7 @@ alias ls='ls --color=auto --group-directories-first'
 alias la='ls -a'
 alias ll='ls -la'
 alias grep='grep --color=auto'
+alias ip='ip --color=auto'
 alias cd..='cd ..'
 alias cls="printf '\033[2J\033[3J\033[1;1H'" # Clears the scrollback buffer too!
 alias configit='/usr/bin/git --git-dir=$HOME/.configit/ --work-tree=$HOME' # Allows managing of dotfiles with git
@@ -62,3 +64,4 @@ source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zs
 source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 ZSH_AUTOSUGGEST_STRATEGY=(completion history) # Add tab completion to autosuggest
 ZSH_AUTOSUGGEST_HISTORY_IGNORE="(cd *)|(ls *)" # Using history here sucks
+

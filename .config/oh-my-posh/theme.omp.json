@@ -2,90 +2,90 @@
   "$schema": "https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/schema.json",
   "blocks": [
     {
+      "type": "prompt",
       "alignment": "left",
       "segments": [
         {
-          "foreground": "lightWhite",
-          "foreground_templates": [
-            "{{ if .Root }}lightRed{{ end }}"
-          ],
           "properties": {
             "display_host": true
           },
-          "style": "plain",
           "template": "<{{ if .Root }}lightRed{{ else }}red{{ end }}>\u250c\u2500\u2500(</>{{ .UserName }}{{ if .Root }} \udb82\udcc7 {{ else }} \udb82\udcc7 {{ end }}{{ .HostName }}<{{ if .Root }}lightRed{{ else }}red{{ end }}>)</>",
-          "type": "session"
+          "foreground": "lightWhite",
+          "type": "session",
+          "style": "plain",
+          "foreground_templates": [
+            "{{ if .Root }}lightRed{{ end }}"
+          ]
         },
         {
-          "foreground": "yellow",
           "properties": {
             "fetch_version": false,
             "fetch_virtual_env": true
           },
-          "style": "plain",
           "template": "<{{ if .Root }}lightRed{{ else }}red{{ end }}>-[</>\ue235 {{ if .Error }}{{ .Error }}{{ else }}{{ if .Venv }}{{ .Venv }}{{ end }}{{ .Full }}{{ end }}<{{ if .Root }}lightRed{{ else }}red{{ end }}>]</>",
-          "type": "python"
+          "foreground": "yellow",
+          "type": "python",
+          "style": "plain"
         },
         {
-          "foreground": "lightWhite",
           "properties": {
             "folder_separator_icon": "<#c0c0c0>/</>",
             "style": "full"
           },
-          "style": "plain",
           "template": "<{{ if .Root }}lightRed{{ else }}red{{ end }}>-[</>{{ .Path }}<{{ if .Root }}lightRed{{ else }}red{{ end }}>]</>",
-          "type": "path"
+          "foreground": "lightWhite",
+          "type": "path",
+          "style": "plain"
         },
         {
-          "foreground": "white",
-          "style": "plain",
           "template": "<{{ if .Root }}lightRed{{ else }}red{{ end }}>-[</>{{ .HEAD }}<{{ if .Root }}lightRed{{ else }}red{{ end }}>]</>",
-          "type": "git"
+          "foreground": "white",
+          "type": "git",
+          "style": "plain"
         }
-      ],
-      "type": "prompt"
+      ]
     },
     {
+      "type": "prompt",
       "alignment": "right",
       "segments": [
         {
-          "foreground": "white",
           "properties": {
             "always_enabled": true,
             "style": "round"
           },
-          "style": "plain",
           "template": " {{ .FormattedMs }} ",
-          "type": "executiontime"
+          "foreground": "white",
+          "type": "executiontime",
+          "style": "plain"
         },
         {
-          "foreground": "lightGreen",
-          "foreground_templates": [
-            "{{ if gt .Code 0 }}red{{ end }}"
-          ],
           "properties": {
             "always_enabled": true
           },
+          "template": " {{ if gt .Code 0 }}<white>({{ .Code }})</> \u2a2f{{else}}✓{{ end }} ",
+          "foreground": "lightGreen",
+          "type": "exit",
           "style": "plain",
-          "template": " {{ if gt .Code 0 }}<white>({{ .Code }})</> \u2a2f{{else}}\u2713{{ end }} ",
-          "type": "exit"
+          "foreground_templates": [
+            "{{ if gt .Code 0 }}red{{ end }}"
+          ]
         }
-      ],
-      "type": "prompt"
+      ]
     },
     {
+      "type": "prompt",
       "alignment": "left",
-      "newline": true,
       "segments": [
         {
-          "foreground": "lightWhite",
-          "style": "plain",
           "template": "<{{ if .Root }}lightRed{{ else }}red{{ end }}>\u2514\u2500</>{{ if .Root }}<lightRed>#</>{{ else }}${{ end }} ",
-          "type": "text"
+          "foreground": "lightWhite",
+          "type": "text",
+          "style": "plain"
         }
       ],
-      "type": "prompt"
+      "newline": true
     }
   ],
-  "version": 2
+  "version": 3
 }

@@ -1,2 +1,2 @@
 action=type
-selector-args="-theme $HOME/.config/rofi/settings/settings.rasi"
+selector-args="-theme /home/aaron/.config/rofi/settings/settings.rasi"
