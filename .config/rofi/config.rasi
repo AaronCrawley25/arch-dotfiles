@@ -1,0 +1,15 @@
+/*
+    ______       __ _ 
+    | ___ \     / _(_)
+    | |_/ /___ | |_ _ 
+    |    // _ \|  _| |
+    | |\ | (_) | | | |
+    \_| \_\___/|_| |_|
+                  
+    File: config.rasi
+    Author: Aaron Crawley
+    Based on: https://github.com/adi1090x/rofi              
+*/
+
+/*****----- Import Correct File -----*****/
+@import                          "settings/settings.rasi"

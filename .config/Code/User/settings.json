@@ -1,0 +1,16 @@
+{
+    "window.menuBarVisibility": "toggle",
+    "editor.fontFamily": "'CaskaydiaCove NFM', 'monospace', monospace",
+    "editor.fontSize": 13,
+    "terminal.external.linuxExec": "kitty",
+    "editor.formatOnSave": true,
+    "C_Cpp.formatting": "vcFormat",
+    "editor.cursorBlinking": "smooth",
+    "editor.cursorSmoothCaretAnimation": "on",
+    "extensions.supportUntrustedWorkspaces": {
+        "albert.tabout": {
+            "supported": true,
+            "version": "0.2.2"
+        },
+    }
+}

@@ -2,6 +2,8 @@
 
 dir="$HOME/.config/rofi/powermenu/"
 theme='powermenu'
+msgTag='screenshot'
+sleepDelay=0.5
 
 confirm_cmd() {
 	rofi -theme-str 'window {location: center; anchor: center; fullscreen: false; width: 250px;}' \
@@ -15,5 +17,24 @@ confirm_cmd() {
 		-theme ${dir}/${theme}.rasi
 }
 
+fullscreen() {
+	sleep $sleepDelay
+	display=$(hyprctl activeworkspace | awk -F'on monitor ' '/on monitor/ {split($2, a, ":"); print a[1]}')
+	grim -o "$display" - | tee $filename | wl-copy -t image/png
+}
+
+region() {
+	location=$(slurp)
+	sleep $sleepDelay
+	grim -g "$location" - | tee $filename | wl-copy -t image/png
+}
+
 option=$(echo -e "󰍹\n󰊓" | confirm_cmd)
-[ $option = "󰍹" ] && $(sleep 1; grim) || $( [ $option = "󰊓" ]  && grim -g "$(slurp)" )
+filename="$GRIM_DEFAULT_DIR/$(date +"%Y%m%d_%Hh%Mm%Ss")_grim.png"
+[ $option = "󰍹" ] && fullscreen || $( [ $option = "󰊓" ]  && region )
+
+action=$(dunstify -a "󰹑 Screenshot" -u low -I "$filename" \
+	-A "default,Open" -h string:x-dunst-stack-tag:$msgTag \
+	"Screenshot copied to clipboard! You can also click this notification to open it!")
+
+[[ "$action" == "default" ]] && xdg-open $filename

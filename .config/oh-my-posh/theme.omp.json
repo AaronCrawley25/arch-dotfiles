@@ -42,6 +42,15 @@
           "foreground": "white",
           "type": "git",
           "style": "plain"
+        },
+        {
+          "type": "kubectl",
+          "style": "plain",
+          "foreground": "white",
+          "template": "<{{ if .Root }}lightRed{{ else }}red{{ end }}>-[</>{{if .Namespace}}󱃾 {{.Namespace}}{{end}}<{{ if .Root }}lightRed{{ else }}red{{ end }}>]</>",
+          "include_folders": [
+            "~/Servers/Cluster/?.*"
+          ]
         }
       ]
     },

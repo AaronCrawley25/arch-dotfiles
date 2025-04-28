@@ -477,6 +477,7 @@
    history_ignore = yes
 
 [spotify-ignore]
-   # Only 1 Spotify notification in history
+   # Only 1 Spotify notification on screen, do not save either
    appname = "Spotify"
    set_stack_tag = "spotify"
+   history_ignore = yes

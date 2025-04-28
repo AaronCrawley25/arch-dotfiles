@@ -6,7 +6,7 @@
     | |\ | (_) | | | |
     \_| \_\___/|_| |_|
                   
-    File: settings.rasi
+    File: launcher.rasi
     Author: Aaron Crawley
     Based on: https://github.com/adi1090x/rofi              
 */
@@ -160,7 +160,7 @@ listview {
     lines:                       10;
     cycle:                       true;
     dynamic:                     true;
-    scrollbar:                   false;
+    scrollbar:                   true;
     layout:                      vertical;
     reverse:                     false;
     fixed-height:                true;
