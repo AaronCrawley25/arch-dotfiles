@@ -39,6 +39,34 @@ return {
             end,
         })
 
+        local cmp_kinds = {
+            Text = '  ',
+            Method = '  ',
+            Function = '  ',
+            Constructor = '  ',
+            Field = '  ',
+            Variable = '  ',
+            Class = '  ',
+            Interface = '  ',
+            Module = '  ',
+            Property = '  ',
+            Unit = '  ',
+            Value = '  ',
+            Enum = '  ',
+            Keyword = '  ',
+            Snippet = '  ',
+            Color = '  ',
+            File = '  ',
+            Reference = '  ',
+            Folder = '  ',
+            EnumMember = '  ',
+            Constant = '  ',
+            Struct = '  ',
+            Event = '  ',
+            Operator = '  ',
+            TypeParameter = '  ',
+        }
+
         local cmp = require('cmp')
         local luasnip = require('luasnip')
 
@@ -55,6 +83,13 @@ return {
                     -- You need Neovim v0.10 to use vim.snippet
                     require('luasnip').lsp_expand(args.body)
                 end,
+            },
+            formatting = {
+                fields = { "kind", "abbr" },
+                format = function (_, item)
+                    item.kind = cmp_kinds[item.kind] or ""
+                    return item
+                end
             },
             mapping = cmp.mapping.preset.insert({
                 ['<CR>'] = cmp.mapping(function(fallback)
