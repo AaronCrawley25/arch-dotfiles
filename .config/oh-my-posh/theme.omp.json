@@ -9,20 +9,17 @@
           "properties": {
             "display_host": true
           },
-          "template": "<{{ if .Root }}lightRed{{ else }}red{{ end }}>\u250c\u2500\u2500(</>{{ .UserName }}{{ if .Root }} \udb82\udcc7 {{ else }} \udb82\udcc7 {{ end }}{{ .HostName }}<{{ if .Root }}lightRed{{ else }}red{{ end }}>)</>",
+          "template": "<red>\u250c\u2500\u2500(</>{{ .UserName }} \udb82\udcc7 {{ .HostName }}<red>)</>",
           "foreground": "lightWhite",
           "type": "session",
-          "style": "plain",
-          "foreground_templates": [
-            "{{ if .Root }}lightRed{{ end }}"
-          ]
+          "style": "plain"
         },
         {
           "properties": {
             "fetch_version": false,
             "fetch_virtual_env": true
           },
-          "template": "<{{ if .Root }}lightRed{{ else }}red{{ end }}>-[</>\ue235 {{ if .Error }}{{ .Error }}{{ else }}{{ if .Venv }}{{ .Venv }}{{ end }}{{ .Full }}{{ end }}<{{ if .Root }}lightRed{{ else }}red{{ end }}>]</>",
+          "template": "<red>-[</>\ue235 {{ if .Error }}{{ .Error }}{{ else }}{{ if .Venv }}{{ .Venv }}{{ end }}{{ .Full }}{{ end }}<red>]</>",
           "foreground": "yellow",
           "type": "python",
           "style": "plain"
@@ -32,13 +29,13 @@
             "folder_separator_icon": "<#c0c0c0>/</>",
             "style": "full"
           },
-          "template": "<{{ if .Root }}lightRed{{ else }}red{{ end }}>-[</>{{ .Path }}<{{ if .Root }}lightRed{{ else }}red{{ end }}>]</>",
+          "template": "<red>-[</>{{ .Path }}<red>]</>",
           "foreground": "lightWhite",
           "type": "path",
           "style": "plain"
         },
         {
-          "template": "<{{ if .Root }}lightRed{{ else }}red{{ end }}>-[</>{{ .HEAD }}<{{ if .Root }}lightRed{{ else }}red{{ end }}>]</>",
+          "template": "<red>-[</>{{ .HEAD }}<red>]</>",
           "foreground": "white",
           "type": "git",
           "style": "plain"
@@ -47,7 +44,7 @@
           "type": "kubectl",
           "style": "plain",
           "foreground": "white",
-          "template": "<{{ if .Root }}lightRed{{ else }}red{{ end }}>-[</>{{if .Namespace}}󱃾 {{.Namespace}}{{end}}<{{ if .Root }}lightRed{{ else }}red{{ end }}>]</>",
+          "template": "<red>-[</>{{if .Namespace}}󱃾 {{.Namespace}}{{end}}<red>]</>",
           "include_folders": [
             "~/Servers/Cluster/?.*"
           ]
@@ -87,7 +84,7 @@
       "alignment": "left",
       "segments": [
         {
-          "template": "<{{ if .Root }}lightRed{{ else }}red{{ end }}>\u2514\u2500</>{{ if .Root }}<lightRed>#</>{{ else }}${{ end }} ",
+          "template": "<red>\u2514\u2500</>$ ",
           "foreground": "lightWhite",
           "type": "text",
           "style": "plain"

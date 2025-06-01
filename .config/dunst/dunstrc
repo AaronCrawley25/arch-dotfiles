@@ -481,3 +481,7 @@
    appname = "Spotify"
    set_stack_tag = "spotify"
    history_ignore = yes
+
+[kdeconnect-color]
+    appname = "KDE Connect"
+    frame_color = "#E5383B"

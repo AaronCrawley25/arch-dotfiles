@@ -31,8 +31,8 @@ unsetopt LIST_BEEP # Disable the tab complete beep
 ############ ALIASES ############
 alias ls='ls --color=auto --group-directories-first'
 alias la='ls -a'
-alias ll='ls -la'
-alias lr='ls -lR'
+alias ll='ls -lah'
+alias lr='ls -lRh'
 alias grep='grep --color=auto'
 alias ip='ip --color=auto'
 alias cd..='cd ..'
@@ -41,8 +41,11 @@ alias configit='/usr/bin/git --git-dir=$HOME/.configit/ --work-tree=$HOME' # All
 alias ssh="kitten ssh" # SSH doesn't work with kitty by default, so we doin' this instead
 alias k='kubectl'
 alias kns='kubens'
-alias less='bat -p'
+alias kat='bat -pp -l yaml'
+alias less='bat -p --paging=always'
 alias cat='bat -pp'
+alias nv='nvim'
+alias pyactivate='source ./.env/bin/activate'
 
 ############ FUNCTIONS  ############
 lfcd () {

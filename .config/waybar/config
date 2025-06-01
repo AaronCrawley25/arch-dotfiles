@@ -81,12 +81,13 @@
             "class<firefox> title<.*outlook.*>": " 󰴢", // Windows whose titles contain "outlook"
             "class<firefox> title<Picture-in-Picture>": "", // Windows whose titles contain "outlook"
             "class<steam> title<>": "", // Fix for steam menus counting as additional clients
-            "title<.*vim.*>": " ", // Windows whose titles contain "vim"
+            "class<kitty> title<.*nv.*>": " ", // Windows whose titles contain "vim"
             "class<firefox>": " 󰈹", // Windows whose classes are "firefox"
             "class<kitty>": " ",
             "class<com.github.flxzt.rnote>": " 󱓧",
             "class<org.mixxx.Mixxx>": " ",
             "class<io.missioncenter.MissionCenter>": " ",
+            "class<org.kde.kdeconnect.*>": " ",
             "class<virt-manager>": " 󰢹",
             "class<Gimp-.*>": " ",
             "code": " 󰨞",
