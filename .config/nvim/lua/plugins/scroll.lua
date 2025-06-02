@@ -4,8 +4,9 @@ return {
         local cinnamon = require("cinnamon")
 
         cinnamon.setup({
+            -- Disable these and only enable explictly liked ones
             keymaps = {
-                basic = true,
+                basic = false,
                 extra = false,
             }
         })
@@ -17,5 +18,8 @@ return {
         vim.keymap.set("n", "zz", function() cinnamon.scroll("zz") end)
         vim.keymap.set("n", "zt", function() cinnamon.scroll("zt") end)
         vim.keymap.set("n", "zb", function() cinnamon.scroll("zb") end)
+
+        vim.keymap.set("n", "}", function() cinnamon.scroll("}zz") end)
+        vim.keymap.set("n", "{", function() cinnamon.scroll("{zz") end)
     end
 }

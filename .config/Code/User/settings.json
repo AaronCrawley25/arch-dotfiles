@@ -12,5 +12,10 @@
             "supported": true,
             "version": "0.2.2"
         },
+    },
+    "git.enableCommitSigning": true,
+    "markdownlint.config": {
+        "default": true,
+        "MD029": false
     }
 }

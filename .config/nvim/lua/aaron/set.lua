@@ -6,6 +6,16 @@ vim.opt.softtabstop = 4
 vim.opt.shiftwidth = 4
 vim.opt.expandtab = true
 
+-- Change Options for Specific Filetypes
+vim.api.nvim_create_autocmd("FileType", {
+    pattern = "markdown",
+    command = "setlocal shiftwidth=2 tabstop=2"
+})
+vim.api.nvim_create_autocmd("FileType", {
+    pattern = "yaml",
+    command = "setlocal shiftwidth=2 tabstop=2"
+})
+
 vim.opt.smartindent = true
 
 vim.opt.wrap = false
