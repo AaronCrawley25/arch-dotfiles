@@ -27,3 +27,8 @@ vim.opt.incsearch = true
 vim.opt.scrolloff = 10
 
 vim.diagnostic.config({ virtual_text = true })
+
+vim.g.markdown_fenced_languages = {
+    'yaml',
+    'sh',
+}
