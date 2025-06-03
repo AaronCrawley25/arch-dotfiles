@@ -37,7 +37,7 @@ alias grep='grep --color=auto'
 alias ip='ip --color=auto'
 alias cd..='cd ..'
 alias cls="printf '\033[2J\033[3J\033[1;1H'" # Clears the scrollback buffer too!
-alias configit='/usr/bin/git --git-dir=$HOME/.configit/ --work-tree=$HOME' # Allows managing of dotfiles with git
+alias configit='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME' # Allows managing of dotfiles with git
 alias ssh="kitten ssh" # SSH doesn't work with kitty by default, so we doin' this instead
 alias k='kubectl'
 alias kns='kubens'
