@@ -18,7 +18,7 @@ return {
 		-- vim.keymap.set("n", "<leader>gb", "<cmd>G blame<CR>")
 
 		-- Log
-		vim.keymap.set("n", "<leader>gl", "<cmd>G log<CR>")
+		vim.keymap.set("n", "<leader>gl", "<cmd>G log --graph --decorate --oneline<CR>")
 
 		-- Stash
 		vim.keymap.set("n", "<leader>gss", "<cmd>G stash<CR>")

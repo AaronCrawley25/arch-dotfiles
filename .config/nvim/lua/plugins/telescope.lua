@@ -34,5 +34,7 @@ return {
 
 		require("telescope").load_extension("ui-select")
 		require("telescope").load_extension("persisted")
+
+		vim.keymap.set("n", "<leader>s", "<Cmd>Telescope persisted<CR>", { desc = "Telescope sessions" })
 	end,
 }

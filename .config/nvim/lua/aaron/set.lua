@@ -8,12 +8,12 @@ vim.opt.expandtab = true
 
 -- Change Options for Specific Filetypes
 vim.api.nvim_create_autocmd("FileType", {
-    pattern = "markdown",
-    command = "setlocal shiftwidth=2 tabstop=2"
+	pattern = "markdown",
+	command = "setlocal shiftwidth=2 tabstop=2",
 })
 vim.api.nvim_create_autocmd("FileType", {
-    pattern = "yaml",
-    command = "setlocal shiftwidth=2 tabstop=2"
+	pattern = "yaml",
+	command = "setlocal shiftwidth=2 tabstop=2",
 })
 
 vim.opt.smartindent = true
@@ -29,6 +29,11 @@ vim.opt.scrolloff = 10
 vim.diagnostic.config({ virtual_text = true })
 
 vim.g.markdown_fenced_languages = {
-    'yaml',
-    'sh',
+	"yaml",
+	"sh",
 }
+
+vim.api.nvim_create_autocmd("FileType", {
+	pattern = "text,markdown",
+	command = "setlocal textwidth=80",
+})
