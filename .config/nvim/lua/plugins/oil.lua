@@ -16,6 +16,7 @@ return {
 					return true
 				end,
 			},
+			skip_confirm_for_simple_edits = true,
 		})
 		vim.keymap.set("n", "<leader>bf", "<CMD>Oil<CR>", { desc = "Browse files (oil)" })
 	end,

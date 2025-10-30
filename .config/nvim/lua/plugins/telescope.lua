@@ -8,6 +8,7 @@ return {
 	},
 	config = function()
 		local builtin = require("telescope.builtin")
+		local actions = require("telescope.actions")
 		vim.keymap.set("n", "<leader>ff", builtin.find_files, { desc = "Telescope find files" })
 		vim.keymap.set("n", "<leader>fg", builtin.git_files, { desc = "Telescope git files" })
 		vim.keymap.set("n", "<leader>fb", builtin.buffers, { desc = "Telescope buffers" })
@@ -18,6 +19,7 @@ return {
 		vim.keymap.set("n", "<leader>fs", builtin.live_grep, { desc = "Telescope live grep" })
 		vim.keymap.set("n", "<leader>gb", builtin.git_branches, { desc = "Telescope git branches" })
 		vim.keymap.set("n", "<leader>/", builtin.current_buffer_fuzzy_find, { desc = "Telescope current buffer fzf" })
+		vim.keymap.set("n", "<leader>fm", builtin.marks, { desc = "Telescope marks" })
 
 		require("telescope").setup({
 			extensions = {

@@ -8,11 +8,7 @@ vim.opt.expandtab = true
 
 -- Change Options for Specific Filetypes
 vim.api.nvim_create_autocmd("FileType", {
-	pattern = "markdown",
-	command = "setlocal shiftwidth=2 tabstop=2",
-})
-vim.api.nvim_create_autocmd("FileType", {
-	pattern = "yaml",
+	pattern = "markdown,yaml",
 	command = "setlocal shiftwidth=2 tabstop=2",
 })
 

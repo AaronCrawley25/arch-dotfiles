@@ -36,7 +36,6 @@ return {
 				vim.keymap.set("n", "gr", "<cmd>lua vim.lsp.buf.references()<cr>", opts)
 				vim.keymap.set("n", "gs", "<cmd>lua vim.lsp.buf.signature_help()<cr>", opts)
 				vim.keymap.set("n", "<F2>", "<cmd>lua vim.lsp.buf.rename()<cr>", opts)
-				vim.keymap.set({ "n", "x" }, "<F3>", "<cmd>lua vim.lsp.buf.format({async = true})<cr>", opts)
 				vim.keymap.set("n", "<A-CR>", "<cmd>lua vim.lsp.buf.code_action()<cr>", opts)
 			end,
 		})
@@ -84,7 +83,7 @@ return {
 			snippet = {
 				expand = function(args)
 					-- You need Neovim v0.10 to use vim.snippet
-					require("luasnip").lsp_expand(args.body)
+					luasnip.lsp_expand(args.body)
 				end,
 			},
 			formatting = {
@@ -95,22 +94,9 @@ return {
 				end,
 			},
 			mapping = cmp.mapping.preset.insert({
-				-- ["<CR>"] = cmp.mapping(function(fallback)
-				-- 	if cmp.visible() then
-				-- 		if luasnip.expandable() then
-				-- 			luasnip.expand()
-				-- 		else
-				-- 			cmp.confirm({
-				-- 				select = true,
-				-- 			})
-				-- 		end
-				-- 	else
-				-- 		fallback()
-				-- 	end
-				-- end),
 				["<CR>"] = cmp.mapping({
 					i = function(fallback)
-						if cmp.visible() then
+						if cmp.visible() and cmp.get_selected_entry() then
 							cmp.confirm({ behavior = cmp.ConfirmBehavior.Replace, select = false })
 						else
 							fallback()
@@ -128,11 +114,14 @@ return {
 					elseif luasnip.locally_jumpable(1) then
 						luasnip.jump(1)
 					else
+						-- If its still visible we want to close it
+						if cmp.visible() then
+							cmp.close()
+						end
+
 						fallback()
 					end
 				end, { "i", "s" }),
-
-				-- Super shift tab
 				["<S-Tab>"] = cmp.mapping(function(fallback)
 					if cmp.visible() then
 						cmp.select_prev_item({ behavior = "select" })
