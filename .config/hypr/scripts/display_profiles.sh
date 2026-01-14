@@ -21,6 +21,16 @@ function changeProfile {
         ln -sf "$HOME/.config/hypr/monitors.conf.d/$hash.conf" "$HOME/.config/hypr/monitors.conf" 
     fi
 
+    # Check config exists for hash
+    if [[ -f "$HOME/.config/hypr/workspaces.conf.d/$hash.conf" ]]; then
+        # Switch to this setup's config
+        ln -sf "$HOME/.config/hypr/workspaces.conf.d/$hash.conf" "$HOME/.config/hypr/workspaces.conf" 
+    else
+        # Create and switch to this monitor's config
+        cp "$HOME/.config/hypr/workspaces.conf.d/default.conf" "$HOME/.config/hypr/workspaces.conf.d/$hash.conf"
+        ln -sf "$HOME/.config/hypr/workspaces.conf.d/$hash.conf" "$HOME/.config/hypr/workspaces.conf" 
+    fi
+
     # Reload display config!
     hyprctl reload
 }
