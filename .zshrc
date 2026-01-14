@@ -44,6 +44,7 @@ alias kns='kubens'
 alias kat='bat -pp -l yaml'
 alias less='bat -p --paging=always'
 alias cat='bat -pp'
+alias vim='nvim'
 alias nv='nvim'
 alias pyactivate='source ./.env/bin/activate'
 
@@ -57,6 +58,9 @@ lfcd () {
 export GPG_TTY=$(tty)
 export MANPAGER="sh -c 'col -bx | bat -l man -p --paging=always'" # Use bat as man pager for syntax highlighting!
 export MANROFFOPT="-c"
+export USB="/run/media/$(whoami)"
+export SUDO_EDITOR=/usr/bin/nvim
+export KUBE_EDITOR=/usr/bin/nvim
 
 ############ KEYBINDS ############
 bindkey '\e[H'  beginning-of-line # Home Key

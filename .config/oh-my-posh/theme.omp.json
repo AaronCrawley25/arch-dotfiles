@@ -46,7 +46,7 @@
           "foreground": "white",
           "template": "<red>-[</>{{if .Namespace}}󱃾 {{.Namespace}}{{end}}<red>]</>",
           "include_folders": [
-            "~/Servers/Cluster/?.*"
+            "~/Servers/?.*"
           ]
         }
       ]
