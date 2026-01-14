@@ -25,57 +25,57 @@ __      ____ _ _   _| |__   __ _ _ __
 @define-color color10 #FFFFFF;
 
 * {
-	border: none;
-	border-radius: 0;
-	font-family: 'CaskaydiaCove NF';
-	font-weight: 600;
-	min-height: 16px;
+    border: none;
+    border-radius: 0;
+    font-family: 'CaskaydiaCove NF';
+    font-weight: 600;
+    min-height: 16px;
 }
 
 tooltip {
-	font-size: 12px;
+    font-size: 12px;
 }
 
 window#waybar {
-	background: transparent;
+    background: transparent;
 }
 
 window#waybar.hidden {
-	opacity: 0.2;
+    opacity: 0.2;
 }
 
 #workspaces {
-	margin-top: 6px;
-	margin-left: 8px;
-	margin-right: 4px;
-	border-radius: 26px;
-	background: @color9;
-	transition: none;
-	font-size: 15px;
-	padding-right: 8px;
-	padding-left: 4px;
+    margin-top: 6px;
+    margin-left: 8px;
+    margin-right: 4px;
+    border-radius: 26px;
+    background: @color9;
+    transition: none;
+    font-size: 15px;
+    padding-right: 8px;
+    padding-left: 4px;
 }
 
 #workspaces button {
-	transition: none;
-	color: @color3;
-	background: transparent;
+    transition: none;
+    color: @color3;
+    background: transparent;
 }
 
 #workspaces button.visible {
-	color: @color4;
+    color: @color4;
 }
 
 #workspaces button.active {
-	color: @color5;
+    color: @color5;
 }
 
 
 #workspaces button:hover {
-	transition: none;
-	box-shadow: inherit;
-	text-shadow: inherit;
-	color: @color6;
+    transition: none;
+    box-shadow: inherit;
+    text-shadow: inherit;
+    color: @color6;
 }
 
 #battery,
@@ -84,9 +84,10 @@ window#waybar.hidden {
 #window,
 #custom-power,
 #network,
+#idle_inhibitor,
 #sound,
 #custom-dnd {
-	font-size: 12px;
+    font-size: 12px;
 }
 
 /* Modules theming */
@@ -96,21 +97,22 @@ window#waybar.hidden {
 #window,
 /* #custom-power, */
 #custom-launcher,
+#idle_inhibitor,
 #network,
 #bluetooth,
 #sound,
 #setpow,
 #custom-dnd {
-	margin-top: 6px;
-	margin-left: 4px;
-	margin-right: 4px;
-	padding-left: 14px;
-	padding-right: 14px;
-	margin-bottom: 0;
-	border-radius: 26px;
-	transition: none;
-	color: @color2;
-	background: @color9;
+    margin-top: 6px;
+    margin-left: 4px;
+    margin-right: 4px;
+    padding-left: 14px;
+    padding-right: 14px;
+    margin-bottom: 0;
+    border-radius: 26px;
+    transition: none;
+    color: @color2;
+    background: @color9;
 }
 
 /* Modules hover theming */
@@ -122,34 +124,36 @@ window#waybar.hidden {
 #sound:hover,
 /* #custom-power:hover, */
 #setpow:hover,
+#idle_inhibitor:hover,
 #clock:hover {
-	background: @color8;
+    background: @color8;
 }
 
 /* Override module theming */
+#idle_inhibitor,
 #custom-dnd {
-	padding-left: 12px;
+    padding-left: 12px;
 }
 
 #custom-launcher {
-	padding-left: 11px;
-	margin-left: 8px;
-	margin-right: 0px;
-	color: @color2;
+    padding-left: 11px;
+    margin-left: 8px;
+    margin-right: 0px;
+    color: @color2;
 }
 
 #custom-power {
-	margin-right: 4px;
+    margin-right: 4px;
 }
 
 #custom-settings {
-	margin-right: 16px;
+    margin-right: 16px;
 }
 
 #bluetooth {
-	font-size: 13px;
+    font-size: 13px;
 }
 
 #privacy {
-	margin-left: 8px;
+    margin-left: 8px;
 }

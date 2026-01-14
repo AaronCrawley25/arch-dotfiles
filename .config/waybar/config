@@ -23,6 +23,7 @@
         "network",
         "bluetooth",
         "custom/dnd",
+        "idle_inhibitor",
         "group/sound",
         "clock",
         "group/setpow"
@@ -190,5 +191,12 @@
             "privacy"
         ],
         "drawer": ""
+    },
+    "idle_inhibitor": {
+        "format": "{icon}",
+        "format-icons": {
+            "activated": "󰅶",
+            "deactivated": "󰾪"
+        }
     }
 }
